@@ -1,7 +1,8 @@
 # Usage
 
 ## server deployment
-```
+
+``` command
 ssh root@49.235.149.160
 cd wechat-service
 docker-compose build
@@ -9,22 +10,23 @@ docker-compose up
 ```
 
 ## docker command
-show images
 
-`docker images`
+- show images
 
-show containers
+  `docker images`
 
-`docker container ls -a` or `docker ps -a`
+- show containers
 
-container logs
+  `docker container ls -a` or `docker ps -a`
 
-`docker container logs [container ID]`
+- container logs
 
-enter container
+  `docker container logs [container ID]`
 
-`docker container exec -it [container ID] /bin/bash`
+- enter container
 
-mysql login
+  `docker container exec -it [container ID] /bin/bash`
 
-`mysql -u root -p`
+- mysql login
+
+  `mysql -u root -p`
