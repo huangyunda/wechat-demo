@@ -1,0 +1,19 @@
+{
+  "name": "koa-example",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "@koa/cors": "^2.2.3",
+    "co-wechat": "^2.4.0",
+    "crypto-js": "^3.1.9-1",
+    "koa": "^2.8.1",
+    "koa-router": "^7.4.0",
+    "mysql": "^2.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "yd_huang",
+  "license": "ISC"
+}
