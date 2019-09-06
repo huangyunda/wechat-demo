@@ -9,18 +9,22 @@ docker-compose up
 ```
 
 ## docker command
-查看所有image
+show images
+
 `docker images`
 
-查看所有container
+show containers
+
 `docker container ls -a` or `docker ps -a`
 
-container日志
+container logs
+
 `docker container logs [container ID]`
 
-进入container
+enter container
+
 `docker container exec -it [container ID] /bin/bash`
 
-mysql登录
-`mysql -u root -p`
+mysql login
 
+`mysql -u root -p`
