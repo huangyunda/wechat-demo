@@ -3,7 +3,7 @@
 ## server deployment
 
 ``` command
-ssh root@49.235.149.160
+ssh root@xxx
 cd wechat-service
 docker-compose build
 docker-compose up

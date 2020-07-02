@@ -1,9 +1,3 @@
-const wechatConfig = {
-  token: 'mihua',
-  appid: 'wx3a2a5562d9c1f211',
-  encodingAESKey: 'wtYWuic1yPjCBJmO8mqAIwf6MpvLI3K69ZqL6YTtjet',
-};
-
 const mysqlConfig = {
   host: process.env.DATABASE_HOST || '127.0.0.1',
   port: 3306,
@@ -24,7 +18,6 @@ const messageConfig = {
 }
 
 module.exports = {
-  wechatConfig,
   mysqlConfig,
   messageConfig,
 }

@@ -1,5 +1,5 @@
 const sha1 = require('crypto-js/sha1');
-const { wechatConfig } = require('../../config');
+const { wechatConfig } = require('../../user');
 
 function verifyFromWeChat(ctx) {
   const { signature, timestamp, nonce, echostr } = ctx.request.query;

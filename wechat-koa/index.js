@@ -4,7 +4,7 @@ const cors = require('@koa/cors');
 const wechat = require('co-wechat');
 
 const routes = require('./router');
-const { wechatConfig } = require('./config');
+const { wechatConfig } = require('./user');
 const handleMessage = require('./handleMessage');
 
 const app = new Koa();

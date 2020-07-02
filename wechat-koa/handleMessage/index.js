@@ -1,4 +1,4 @@
-const pool = require('./pool');
+const pool = require('../pool');
 const { messageConfig } = require('../config');
 
 async function handleMessage(message) {
@@ -20,12 +20,12 @@ async function handleMessage(message) {
 
 async function handleUpdateBirthday(content) {
   let res = '';
-  const [, name, day] = content.split(' ').filter(x => !!x);
-  if (!name || !day || !/^\d{1,2}-\d{1,2}$/.test(day)) {
+  const [, name, lunarDate] = content.split(' ').filter(x => !!x);
+  if (!name || !lunarDate || !/^\d{1,2}-\d{1,2}$/.test(lunarDate)) {
     res = messageConfig.birthday.formatError;;
   } else {
     try {
-      await pool.query('REPLACE INTO birthday(name, day) VALUES(?, ?)', [name, day]);
+      await pool.query('REPLACE INTO birthday(name, lunarDate) VALUES(?, ?)', [name, lunarDate]);
       res = messageConfig.birthday.updateSuccess;
     } catch (e) {
       console.log('error', e);
@@ -39,8 +39,8 @@ async function handleGetBirthday() {
   let res = '';
   try {
     const results = await pool.query('SELECT * FROM birthday');
-    results.forEach(({ name, day }, index) => {
-      res += `${name} ${day}`
+    results.forEach(({ name, lunarDate }, index) => {
+      res += `${name} ${lunarDate}`
       if (index < results.length - 1) res += '\n';
     });
   } catch (e) {
